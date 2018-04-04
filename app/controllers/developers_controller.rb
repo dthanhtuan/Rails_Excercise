@@ -1,58 +1,74 @@
 class DevelopersController < ApplicationController
   before_action :set_developer, only: [:show, :edit, :update, :destroy]
 
-  # GET /developers
+
   def index
-    @developers = Developer.all
+    @developers_search_form = DevelopersSearchForm.new(search_params)
+    @developers = @developers_search_form.search
   end
 
-  # GET /developers/1
+
   def show
   end
 
-  # GET /developers/new
+
   def new
     @developer = Developer.new
   end
 
-  # GET /developers/1/edit
+
   def edit
   end
 
-  # POST /developers
+
   def create
     @developer = Developer.new(developer_params)
 
-    if @developer.save
-      redirect_to @developer, notice: 'Developer was successfully created.'
-    else
-      render :new
+    respond_to do |format|
+      if @developer.save
+        format.html {redirect_to @developer, notice: 'Developer was successfully created.'}
+        format.json {render :show, status: :created, location: @developer}
+      else
+        format.html {render :new}
+        format.json {render json: @developer.errors, status: :unprocessable_entity}
+      end
     end
   end
 
-  # PATCH/PUT /developers/1
+
   def update
-    if @developer.update(developer_params)
-      redirect_to @developer, notice: 'Developer was successfully updated.'
-    else
-      render :edit
+    respond_to do |format|
+      if @developer.update(developer_params)
+        format.html {redirect_to @developer, notice: 'Developer was successfully updated.'}
+        format.json {render :show, status: :ok, location: @developer}
+      else
+        format.html {render :edit}
+        format.json {render json: @developer.errors, status: :unprocessable_entity}
+      end
     end
   end
 
-  # DELETE /developers/1
+
   def destroy
     @developer.destroy
-    redirect_to developers_url, notice: 'Developer was successfully destroyed.'
+    respond_to do |format|
+      format.html {redirect_to developers_url, notice: 'Developer was successfully destroyed.'}
+      format.json {head :no_content}
+    end
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_developer
-      @developer = Developer.find(params[:id])
-    end
+  def set_developer
+    @developer = Developer.find(params[:id])
+  end
 
-    # Only allow a trusted parameter "white list" through.
-    def developer_params
-      params.require(:developer).permit(:email)
-    end
+
+  def developer_params
+    params.require(:developer).permit(:email)
+  end
+
+  def search_params
+    return {} if params[:developers_search_form].blank?
+    params.require(:developers_search_form).permit(:email, :prog_lang, :language_code, :show_all)
+  end
 end
