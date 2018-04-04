@@ -1,7 +1,13 @@
 <p id="notice"><%= notice %></p>
 
 <h1>Developers</h1>
-
+<%= form_for @developers_search_form, url: developers_path, method: :get do |f| %>
+  Email : <%= f.email_field :email %>
+  Programming Languages : <%= f.text_field :prog_lang %>
+  Language Code : <%= f.text_field :language_code %>
+  Show all : <%= f.check_box :show_all %>
+  <%= f.submit "Search" %>
+<% end %>
 
 <table class="table table-striped">
   <thead>
