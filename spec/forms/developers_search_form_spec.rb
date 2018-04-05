@@ -2,11 +2,9 @@ require 'rails_helper'
 RSpec.describe DevelopersSearchForm do
   describe '#search' do
     before do
-      programming_language_php = create :programming_language, name: 'PHP'
-      programming_language_ruby = create :programming_language, name: 'Ruby'
       language_code_en = create :language, code: 'en'
-      create :developer, email: 'mrtest@gmail.com', programming_languages: [programming_language_php], languages: [language_code_en]
-      create :developer, email: 'tuan.dao@tech.reapra.sg', programming_languages: [programming_language_ruby], languages: [language_code_en]
+      create :developer, email: 'mrtest@gmail.com', programming_languages: [create(:programming_language, name: 'PHP')], languages: [language_code_en]
+      create :developer, email: 'tuan.dao@tech.reapra.sg', programming_languages: [create(:programming_language, name: 'Ruby')], languages: [language_code_en]
     end
 
     context 'with no params' do
