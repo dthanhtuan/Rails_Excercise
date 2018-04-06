@@ -9,6 +9,7 @@ AllCops:
     - bin/*
     - config/**/*
     - vendor/**/*
+    - test/*
     - lib/tasks/dev.rake
     - lib/tasks/auto_annotate_models.rake
 Bundler/OrderedGems:
@@ -37,4 +38,4 @@ Style/Documentation:
 Style/FormatStringToken:
   Enabled: false
 Layout/EndOfLine:
-   EnforcedStyle: crlf
+  Enabled: false
