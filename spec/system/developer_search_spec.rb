@@ -2,8 +2,14 @@ require 'rails_helper'
 describe 'Search For Developers With Information' do
   before do
     language_code_en = create :language, code: 'en'
-    create :developer, email: 'mrtest@gmail.com', programming_languages: [create(:programming_language, name: 'PHP')], languages: [language_code_en]
-    create :developer, email: 'tuan.dao@tech.reapra.sg', programming_languages: [create(:programming_language, name: 'Ruby')], languages: [language_code_en]
+    create :developer,
+           email: 'mrtest@gmail.com',
+           programming_languages: [create(:programming_language, name: 'PHP')],
+           languages: [language_code_en]
+    create :developer,
+           email: 'tuan.dao@tech.reapra.sg',
+           programming_languages: [create(:programming_language, name: 'Ruby')],
+           languages: [language_code_en]
   end
 
   it 'Search with empty params' do
