@@ -1,5 +1,5 @@
 require 'rails_helper'
-require "spec_helper"
+require 'spec_helper'
 require 'json'
 
 RSpec.shared_context 'api' do
