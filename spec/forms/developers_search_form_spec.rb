@@ -4,17 +4,17 @@ RSpec.describe DevelopersSearchForm do
     before do
       language_code_en = create :language, code: 'en'
       create :developer,
-             email: 'mrtest@gmail.com',
+             email: 'foo@example.com',
              programming_languages: [create(:programming_language, name: 'PHP')],
              languages: [language_code_en]
       create :developer,
-             email: 'tuan.dao@tech.reapra.sg',
+             email: 'bar@example.com',
              programming_languages: [create(:programming_language, name: 'Ruby')],
              languages: [language_code_en]
     end
 
     context 'with no params' do
-      it 'shows empty lít' do
+      it 'shows empty list' do
         form = DevelopersSearchForm.new
         expect(form.search.size).to eq(0)
       end
@@ -34,7 +34,7 @@ RSpec.describe DevelopersSearchForm do
 
     context 'with developer email' do
       it 'shows developer with email' do
-        form = DevelopersSearchForm.new(email: 'mrtest@gmail.com')
+        form = DevelopersSearchForm.new(email: 'foo@example.com')
         expect(form.search.size).to eq(1)
       end
 
