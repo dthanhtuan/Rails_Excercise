@@ -61,9 +61,5 @@ RSpec.describe DevelopersSearchForm do
         expect(form.search.size).to eq(0)
       end
     end
-
-
-
   end
 end
-
