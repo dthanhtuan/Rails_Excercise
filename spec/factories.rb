@@ -1,10 +1,10 @@
 FactoryBot.define do
   factory :developer, class: Developer do
-    email 'mrabc@gmail.com'
+    email Faker::Internet.email
   end
 
   factory :programming_language, class: ProgrammingLanguage do
-    name 'Ruby'
+    name Faker::ProgrammingLanguage.name
   end
 
   factory :developer_programming_language, class: DeveloperProgrammingLanguage do
