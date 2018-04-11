@@ -7,50 +7,99 @@ describe 'Api::V1::DevelopersController', type: :request do
 
   describe 'GET /api/v1/developers' do
     context 'without params' do
-      let(:response_data) do
-        Developer.all.map do |developer|
-          {
-            email: developer.email,
-            languages: developer.languages.to_json,
-            progamming_languages: developer.programming_languages.to_json
-          }
-        end
+      it_behaves_like 'http_status_code_200_with_json'
+      let(:expected_response) do
+        {
+          data: Developer.all.map do |developer|
+            {
+              id: developer.id.to_s,
+              type: 'developers',
+              attributes: {
+                email: developer.email
+              },
+              relationships: {
+                  languages: {
+                    data: developer.languages.map do |language|
+                      {
+                        id: language.id.to_s,
+                        type: 'languages'
+                      }
+                    end
+                  },
+                  "programming-languages": {
+                    data: developer.programming_languages.map do |programming_language|
+                      {
+                        id: programming_language.id.to_s,
+                        type: 'programming-languages'
+                      }
+                    end
+                  }
+              }
+            }
+          end
+        }
       end
 
       before do
-        create(:developer, email: Faker::Internet.email)
-        create(:developer, email: Faker::Internet.email)
+        create :developer,
+               email: Faker::Internet.unique.email,
+               programming_languages: [create(:programming_language, name: Faker::ProgrammingLanguage.name)],
+               languages: [create(:language, code: 'en')]
+        create :developer,
+               email: Faker::Internet.unique.email,
+               programming_languages: [create(:programming_language, name: Faker::ProgrammingLanguage.name)],
+               languages: [create(:language, code: 'fr')]
         get '/api/v1/developers'
       end
-
-      it_behaves_like 'http_status_code_200_with_json'
     end
   end
 
   describe 'GET /api/v1/developers/:id' do
     context 'when the developer exists' do
-      let(:response_data) do
+      it_behaves_like 'http_status_code_200_with_json'
+      let(:expected_response) do
         {
-          email: @developer.email,
-          languages: @developer.languages.to_json,
-          progamming_languages: @developer.programming_languages.to_json
+          data: {
+            id: @developer.id.to_s,
+            type: 'developers',
+            attributes: {
+              email: @developer.email
+            },
+            relationships: {
+              languages: {
+                data: @developer.languages.map do |language|
+                  {
+                    id: language.id.to_s,
+                    type: 'languages'
+                  }
+                end
+              },
+              "programming-languages": {
+                data: @developer.programming_languages.map do |programming_language|
+                  {
+                    id: programming_language.id.to_s,
+                    type: 'programming-languages'
+                  }
+                end
+              }
+            }
+          }
         }
       end
-
-      before do
-        @developer = create(:developer, email: Faker::Internet.email)
-        get "/api/v1/developers/#{@developer.id}"
-      end
-
-      it_behaves_like 'http_status_code_200_with_json'
     end
 
-    context 'when the developer does not exist' do
-      before do
-        get '/api/v1/developers/non_existing_developer_id'
-      end
-
-      it_behaves_like 'http_status_code_404'
+    before do
+      @developer = create :developer,
+                          email: Faker::Internet.unique.email,
+                          programming_languages: [create(:programming_language, name: Faker::ProgrammingLanguage.name)],
+                          languages: [create(:language, code: 'en')]
+      get "/api/v1/developers/#{@developer.id}"
     end
+  end
+  context 'when the developer does not exist' do
+    before do
+      get '/api/v1/developers/non_existing_developer_id'
+    end
+    it_behaves_like 'http_status_code_404'
   end
 end

@@ -14,8 +14,7 @@ RSpec.shared_context 'api' do
     it 'returns 200 with JSON' do
       expect(response).to be_success
       expect(response.status).to eq(200)
-      json = JSON.parse(response.body)
-      expect(json) == response_data
+      expect(JSON.parse(response.body).deep_symbolize_keys).to eq(expected_response)
     end
   end
 
