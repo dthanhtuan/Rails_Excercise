@@ -21,7 +21,7 @@ PreCommit:
     command: ['bundle', 'exec', 'rubocop']
     on_warn: fail # Treat all warnings as failures
   TrailingWhitespace:
-    enabled: true
+    enabled: false
     exclude:
       - 'spec/fixtures/**/*'
       - 'docs/**/*'
