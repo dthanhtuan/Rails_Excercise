@@ -1,5 +1,3 @@
-require 'factory_bot_rails'
-require 'faker'
 FactoryBot.define do
   factory :developer, class: Developer do
     email Faker::Internet.email

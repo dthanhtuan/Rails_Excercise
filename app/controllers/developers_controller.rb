@@ -62,4 +62,9 @@ class DevelopersController < ApplicationController
     return {} if params[:developers_search_form].blank?
     params.require(:developers_search_form).permit(:email, :prog_lang, :language_code, :show_all)
   end
+  
+  def developer_params
+    params.require(:developer).permit(:email)
+  end
+
 end
