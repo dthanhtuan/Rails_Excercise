@@ -5,6 +5,7 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
+gem 'slim-rails'
 gem 'rubocop', require: false
 gem 'bullet', group: 'development'
 gem 'faker', '~> 1.6', '>= 1.6.6'

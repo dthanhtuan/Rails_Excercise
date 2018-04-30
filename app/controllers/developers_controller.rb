@@ -48,6 +48,10 @@ class DevelopersController < ApplicationController
     end
   end
 
+  def slim_test;
+    @developers = Developer.includes(:programming_languages)
+  end
+
   private
 
   def set_developer
