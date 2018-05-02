@@ -49,7 +49,11 @@ class DevelopersController < ApplicationController
   end
 
   def slim_test;
-    @developers = Developer.includes(:programming_languages)
+    @developers = Developer.all
+    gon.push({
+                 :user_id => 1,
+                 :user_role => "admin"
+             })
   end
 
   private
