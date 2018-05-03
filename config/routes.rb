@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
   resources :developers
+  get 'slim', to: 'developers#slim_test'
+
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   namespace :api do
     namespace :v1 do

@@ -48,6 +48,14 @@ class DevelopersController < ApplicationController
     end
   end
 
+  def slim_test;
+    @developers = Developer.all
+    gon.push({
+                 :user_id => 1,
+                 :user_role => "admin"
+             })
+  end
+
   private
 
   def set_developer
