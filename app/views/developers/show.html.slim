@@ -1,0 +1,28 @@
+p#notice
+  = notice
+table.table.table-striped
+  thead
+    tr
+      th
+        | Email
+      th
+        | Programming Languages
+      th
+        | Languages
+  tbody
+    - if @developer.present?
+      tr
+
+      td
+        = @developer.email
+      td
+        - @developer.programming_languages.each do |pro_lang|
+          = pro_lang.name
+      td
+        - @developer.languages.each do |language_code|
+          = language_code.code
+    - else
+      tr
+
+      td
+        | No result

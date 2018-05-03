@@ -1,0 +1,16 @@
+= form_with(model: developer, local: true) do |form|
+  - if developer.errors.any?
+    #error_explanation
+
+    h2
+      = pluralize(developer.errors.count, "error")
+      |  prohibited this developer from being saved:
+    ul
+      - developer.errors.full_messages.each do |message|
+        li
+          = message
+  .field
+    = form.label :email
+    = form.text_field :email, id: :developer_email
+  .actions
+    = form.submit
