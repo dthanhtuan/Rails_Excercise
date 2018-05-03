@@ -1,0 +1,45 @@
+p#notice
+  = notice
+h1
+  | Developers
+= form_for @developers_search_form, url: developers_path, method: :get do |f|
+  |  Email : 
+  = f.email_field :email
+  |  Programming Languages : 
+  = f.text_field :prog_lang
+  |  Language Code : 
+  = f.text_field :language_code
+  |  Show all : 
+  = f.check_box :show_all
+  = f.submit "Search"
+table.table.table-striped
+  thead
+    tr
+      th
+        | Email
+      th
+        | Programming Languages
+      th
+        | Languages
+  tbody
+    - if @developers.present?
+      - @developers.each do |developer|
+        tr
+
+        td
+          = developer.email
+        td
+          - developer.programming_languages.each do |pro_lang|
+            = pro_lang.name
+        td
+          - developer.languages.each do |language_code|
+            = language_code.code
+    - else
+      tr
+
+      td
+        | No result
+      td
+      td
+br
+= link_to 'New Developer', new_developer_path
