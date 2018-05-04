@@ -1,0 +1,5 @@
+body class="developers slim_test"
+  p this is text
+  / loading js file with content_for
+  - content_for :header_js do
+    = javascript_include_tag "testing_js"
