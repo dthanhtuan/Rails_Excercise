@@ -48,12 +48,9 @@ class DevelopersController < ApplicationController
     end
   end
 
-  def slim_test;
+  def slim_test
     @developers = Developer.all
-    gon.push({
-                 :user_id => 1,
-                 :user_role => "admin"
-             })
+    gon.push(user_id: 1, user_role: 'admin')
   end
 
   private
@@ -70,9 +67,8 @@ class DevelopersController < ApplicationController
     return {} if params[:developers_search_form].blank?
     params.require(:developers_search_form).permit(:email, :prog_lang, :language_code, :show_all)
   end
-  
+
   def developer_params
     params.require(:developer).permit(:email)
   end
-
 end
