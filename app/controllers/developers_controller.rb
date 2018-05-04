@@ -53,6 +53,8 @@ class DevelopersController < ApplicationController
     gon.push(user_id: 1, user_role: 'admin')
   end
 
+  def js_test; end
+
   private
 
   def set_developer
