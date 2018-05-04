@@ -1,0 +1,25 @@
+doctype xml
+= Gon::Base.render_data
+body
+  p
+    | This line is on the left margin.
+       This line will have one space in front of it.
+         This line will have two spaces in front of it.
+           And so on..
+  - @developers.each do |developer|
+    p this #{developer.email} is the second line with space
+    = link_to 'Back', developers_path
+    p id="headline" = developer.created_at
+    a> href='url1' Link1
+    a> href='url2' Link2
+  table
+    tr
+      th Company
+      th Contact
+      th Country
+    tr
+      td Alfreds Futterkiste
+      td Maria Anders
+      td Germany
+javascript:
+  //alert(gon.user_role)
