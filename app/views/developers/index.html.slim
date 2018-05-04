@@ -29,11 +29,9 @@ table.table.table-striped
         td
           = developer.email
         td
-          - developer.programming_languages.each do |pro_lang|
-            = pro_lang.name
+          = developer.programming_languages.pluck(:name).join(", ")
         td
-          - developer.languages.each do |language_code|
-            = language_code.code
+          = developer.languages.pluck(:code).join(", ")
     - else
       tr
 

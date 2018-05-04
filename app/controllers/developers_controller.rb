@@ -6,24 +6,26 @@ class DevelopersController < ApplicationController
     @developers = @developers_search_form.search
   end
 
-  def show; end
+  def show;
+  end
 
   def new
     @developer = Developer.new
   end
 
-  def edit; end
+  def edit;
+  end
 
   def create
     @developer = Developer.new(developer_params)
 
     respond_to do |format|
       if @developer.save
-        format.html { redirect_to @developer, notice: 'Developer was successfully created.' }
-        format.json { render :show, status: :created, location: @developer }
+        format.html {redirect_to @developer, notice: 'Developer was successfully created.'}
+        format.json {render :show, status: :created, location: @developer}
       else
-        format.html { render :new }
-        format.json { render json: @developer.errors, status: :unprocessable_entity }
+        format.html {render :new}
+        format.json {render json: @developer.errors, status: :unprocessable_entity}
       end
     end
   end
@@ -31,11 +33,11 @@ class DevelopersController < ApplicationController
   def update
     respond_to do |format|
       if @developer.update(developer_params)
-        format.html { redirect_to @developer, notice: 'Developer was successfully updated.' }
-        format.json { render :show, status: :ok, location: @developer }
+        format.html {redirect_to @developer, notice: 'Developer was successfully updated.'}
+        format.json {render :show, status: :ok, location: @developer}
       else
-        format.html { render :edit }
-        format.json { render json: @developer.errors, status: :unprocessable_entity }
+        format.html {render :edit}
+        format.json {render json: @developer.errors, status: :unprocessable_entity}
       end
     end
   end
@@ -43,14 +45,14 @@ class DevelopersController < ApplicationController
   def destroy
     @developer.destroy
     respond_to do |format|
-      format.html { redirect_to developers_url, notice: 'Developer was successfully destroyed.' }
-      format.json { head :no_content }
+      format.html {redirect_to developers_url, notice: 'Developer was successfully destroyed.'}
+      format.json {head :no_content}
     end
   end
 
   def slim_test
-    @developers = Developer.all
-    gon.push(user_id: 1, user_role: 'admin')
+    @developers = Developer.includes(:languages).where('developers.id!=?', '0')
+    # gon.push(user_id: 1, user_role: 'admin')
   end
 
   def js_test; end
