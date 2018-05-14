@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  resources :developers
+  resources :developers, :mcmap
   get 'slim', to: 'developers#slim_test'
   get 'js-test', to: 'developers#js_test'
 
