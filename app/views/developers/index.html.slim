@@ -23,15 +23,7 @@ table.table.table-striped
         | Languages
   tbody
     - if @developers.present?
-      - @developers.each do |developer|
-        tr
-
-        td
-          = developer.email
-        td
-          = developer.programming_languages.pluck(:name).join(", ")
-        td
-          = developer.languages.pluck(:code).join(", ")
+        = render 'developer_row'
     - else
       tr
 
@@ -41,3 +33,4 @@ table.table.table-striped
       td
 br
 = link_to 'New Developer', new_developer_path
+= paginate @developers

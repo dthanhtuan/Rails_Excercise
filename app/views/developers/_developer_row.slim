@@ -1,0 +1,8 @@
+-  @developers.each do |developer|
+  tr
+    td
+      = developer.email
+    td
+      = developer.programming_languages.pluck(:name).join(", ")
+    td
+      = developer.languages.pluck(:code).join(", ")

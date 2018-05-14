@@ -6,14 +6,9 @@ git_source(:github) do |repo_name|
 end
 
 gem 'slim-rails'
-gem 'rubocop', require: false
-gem 'bullet', group: 'development'
 gem 'gon'
-gem 'kaminari'
-gem 'faker', '~> 1.6', '>= 1.6.6'
-gem 'rspec-benchmark'
 gem 'active_model_serializers'
-gem 'capybara'
+gem 'capybara' # Browser for testing
 gem 'selenium-webdriver'
 gem 'scss_lint', require: false
 gem 'eslint-rails'
@@ -45,13 +40,18 @@ gem 'jbuilder', '~> 2.5'
 # gem 'capistrano-rails', group: :development
 
 group :development, :test do
-  gem 'rspec-rails', '~> 3.7'
   gem 'factory_bot_rails', '~> 4.0'
+  gem 'kaminari'
+  gem 'rubocop', require: false
+  gem 'bullet', group: 'development'
 end
 
 group :development do
   # Access an IRB console on exception pages or by using <%= console %> anywhere in the code.
+  gem 'rspec-rails', '~> 3.7'
   gem 'web-console', '>= 3.3.0'
+  gem 'rspec-benchmark'
+  gem 'faker', '~> 1.6', '>= 1.6.6'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem

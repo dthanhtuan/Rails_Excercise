@@ -2,8 +2,9 @@ class DevelopersController < ApplicationController
   before_action :set_developer, only: %i[show edit update destroy]
 
   def index
+    return unless stale?(last_modified: Developer.maximum(:updated_at))
     @developers_search_form = DevelopersSearchForm.new(search_params)
-    @developers = @developers_search_form.search
+    @developers = @developers_search_form.search.page(params[:page])
   end
 
   def show;
@@ -51,7 +52,7 @@ class DevelopersController < ApplicationController
   end
 
   def slim_test
-    @developers = Developer.includes(:languages).where('developers.id!=?', '0')
+    @developers = Developer.includes(:languages)
     # gon.push(user_id: 1, user_role: 'admin')
   end
 
