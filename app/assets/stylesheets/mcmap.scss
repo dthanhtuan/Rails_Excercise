@@ -1,6 +1,13 @@
 // Place all the styles related to the mcmap controller here.
 // They will automatically be included in application.scss.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-#html_form_table div input[type="text"]{
+#html_form_table div > input[type="text"]{
   width: 100%;
+}
+#html_form_table {
+  border: 1px solid #ccc;
+  padding: 1em;
+}
+#modal_body_hospital_data  div.button-group{
+  margin-bottom: 3em;
 }

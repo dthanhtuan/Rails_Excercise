@@ -1,14 +1,14 @@
 doctype html
 html
   head
-    = stylesheet_link_tag 'bootstrap.min.css'
-    = javascript_include_tag 'bootstrap.min.js'
-    link
     title
       | Rails
     = csrf_meta_tags
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
     == yield :header_js
+
   body
+    = render 'mcmap/shared/header'
     = yield
+  = render 'mcmap/shared/footer'
