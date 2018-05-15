@@ -1,374 +1,374 @@
 <div class="container">
-  <div class="row">
-    <form>
+  <form>
+    <div class="row">
       <!--  HTML Form-->
-      <div class="col-md-2 col-sm-2 col-sm-2">
+      <div class="col-md-2  col-sm-2 col-xs-2">
         <span>Left Square</span>
       </div>
-      <div class="col-md-10 col-sm-10 col-sm-10">
-        <div class="col-md-12 col-sm-12">
+      <div class="col-md-10 col-sm-10 col-xs-10">
+        <div class="col-md-12 col-xs-12">
           <p>
             Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris
             condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis
             euismod. Donec sed odio dui.
           </p>
         </div>
-        <div class="col-md-1 col-sm-2">
+        <div class="col-md-1 col-sm-1 col-xs-2  ">
           <button type="button" class="btn btn-sm" data-toggle="modal" data-target="#myModal">
             Button
           </button>
         </div>
-        <div class="col-md-1 col-sm-2">
+        <div class="col-md-1 col-sm-1 col-xs-2 col-xs-offset-2 col-md-offset-0 col-sm-offset-1">
           <button type="button " class="btn btn-sm">
             Button
           </button>
         </div>
         <%= render "mcmap/shared/html_table_form_model" %>
       </div>
-  <div class="col-md-12 col-sm-12">
+    </div>
     <hr>
-  </div>
-  <div class="col-md-12 col-sm-12">
-    <div id="html_form_table">
-      <!--  Row 1 -->
-      <div class="row form-group">
-        <div class="col-md-2 col-sm-2">
-          <span>Label 1</span>
-        </div>
-        <div class="col-md-5 col-sm-5">
-          <input type="text">
-        </div>
-        <div class="col-md-5 col-sm-5">
-        </div>
-      </div>
-      <hr class="separator">
-      <!--  Row 2 -->
-      <div class="row form-group">
-        <div class="col-md-2 col-sm-2">
-          <span>Label 2</span>
-        </div>
-        <div class="col-md-5 col-sm-5">
-          <input type="text">
-        </div>
-        <div class="col-md-5 col-sm-5">
-          <span>* note: Donec id elit non mi porta gravida at eget metus.</span>
-        </div>
-      </div>
-      <hr class="separator">
-      <!--  Row 3 -->
-      <div class="row form-group">
-        <div class="col-md-2 col-sm-2">
-          <span>Label 3</span>
-        </div>
-        <div class="col-md-6 col-sm-6">
-          <input type="text">
-        </div>
-        <div class="col-md-6 col-sm-4">
-        </div>
-      </div>
-      <hr class="separator">
-      <!--  Row 4 -->
-      <div class="row form-group">
-        <div class="col-md-2 col-sm-2">
-          <span>Label 4</span>
-        </div>
-        <div class="col-md-6 col-sm-6">
-          <input type="text">
-        </div>
-        <div class="col-md-4 col-sm-4 form-inline">
-          <div> Text &nbsp;
-            <select class="form-control form-control-sm">
-              <option>Select 1</option>
-              <option>Select 2</option>
-              <option>Select 3</option>
-              <option>Select 4</option>
-            </select>
-            Text
+    <div class="row">
+      <div class="col-md-12 col-xs-12">
+        <div id="html_form_table">
+          <!--  Row 1 -->
+          <div class="row form-group">
+            <div class="col-md-2 col-xs-6">
+              <span>Label 1</span>
+            </div>
+            <div class="col-md-5 col-xs-12">
+              <input type="text">
+            </div>
+            <div class="col-md-5 col-xs-12">
+            </div>
           </div>
-        </div>
-      </div>
-      <hr class="separator">
-      <!--  Row 5 -->
-      <div class="row form-group">
-        <div class="col-md-2 col-sm-2">
-          <span>Label 5</span>
-        </div>
-        <div class="col-md-6 col-sm-4">
-          <input type="text">
-        </div>
-        <div class="col-md-6 col-sm-6">
-        </div>
-      </div>
-      <hr class="separator">
-      <!--  Row 6 -->
-      <div class="row form-group">
-        <div class="col-md-2 col-sm-2">
-          <span>Label 6</span>
-        </div>
-        <div class="col-md-10 col-sm-10">
-          <div class="row form-inline">
-            <%= generate_sample_checkboxes(4) %>
+          <hr class="separator">
+          <!--  Row 2 -->
+          <div class="row form-group">
+            <div class="col-md-2 ">
+              <span>Label 2</span>
+            </div>
+            <div class="col-md-5 col-xs-12">
+              <input type="text">
+            </div>
+            <div class="col-md-5 col-xs-12">
+              <span>* note: Donec id elit non mi porta gravida at eget metus.</span>
+            </div>
           </div>
-        </div>
-      </div>
-      <hr class="separator">
-      <!--  Row 7 -->
-      <div class="row form-group">
-        <div class="col-md-2 col-sm-2">
-          <span>Label 7</span>
-        </div>
-        <div class="col-md-10 col-sm-10">
-          <div class="row form-inline">
-            <%= generate_sample_checkboxes(10) %>
+          <hr class="separator">
+          <!--  Row 3 -->
+          <div class="row form-group">
+            <div class="col-md-2 ">
+              <span>Label 3</span>
+            </div>
+            <div class="col-md-6 col-xs-12">
+              <input type="text">
+            </div>
+            <div class="col-md-6 col-xs-12">
+            </div>
           </div>
-          <div class="col-md-12 col-sm-12">
-            <hr>
+          <hr class="separator">
+          <!--  Row 4 -->
+          <div class="row form-group">
+            <div class="col-md-2 ">
+              <span>Label 4</span>
+            </div>
+            <div class="col-md-6 col-xs-12">
+              <input type="text">
+            </div>
+            <div class="col-md-4 col-xs-12 form-inline">
+              <div> Text &nbsp;
+                <select class="form-control form-control-sm">
+                  <option>Select 1</option>
+                  <option>Select 2</option>
+                  <option>Select 3</option>
+                  <option>Select 4</option>
+                </select>
+                Text
+              </div>
+            </div>
           </div>
-          <div class="row form-inline">
-            <%= generate_sample_checkboxes(10) %>
+          <hr class="separator">
+          <!--  Row 5 -->
+          <div class="row form-group">
+            <div class="col-md-2 ">
+              <span>Label 5</span>
+            </div>
+            <div class="col-md-6 col-xs-12">
+              <input type="text">
+            </div>
+            <div class="col-md-6 col-xs-12">
+            </div>
           </div>
-          <div class="col-md-12 col-sm-12">
-            <hr>
+          <hr class="separator">
+          <!--  Row 6 -->
+          <div class="row form-group">
+            <div class="col-md-2 ">
+              <span>Label 6</span>
+            </div>
+            <div class="col-md-10 col-xs-12">
+              <div class="row form-inline">
+                <%= generate_sample_checkboxes(4) %>
+              </div>
+            </div>
           </div>
-          <div class="row form-inline">
-            <%= generate_sample_checkboxes(2) %>
+          <hr class="separator">
+          <!--  Row 7 -->
+          <div class="row form-group">
+            <div class="col-md-2 ">
+              <span>Label 7</span>
+            </div>
+            <div class="col-md-10 col-xs-12">
+              <div class="row form-inline">
+                <%= generate_sample_checkboxes(10) %>
+              </div>
+              <div class="col-md-12 col-xs-12">
+                <hr>
+              </div>
+              <div class="row form-inline">
+                <%= generate_sample_checkboxes(10) %>
+              </div>
+              <div class="col-md-12 col-xs-12">
+                <hr>
+              </div>
+              <div class="row form-inline">
+                <%= generate_sample_checkboxes(2) %>
+              </div>
+              <div class="col-md-12 col-xs-12">
+                <hr>
+              </div>
+              <div class="row form-inline">
+                <%= generate_sample_checkboxes(18) %>
+              </div>
+            </div>
           </div>
-          <div class="col-md-12 col-sm-12">
-            <hr>
+          <hr class="separator">
+          <!--  Row 8 -->
+          <div class="row form-group">
+            <div class="col-md-2 ">
+              <span>Label 8</span>
+            </div>
+            <div class="col-md-10 col-xs-12">
+              <div class="row form-inline">
+                <%= generate_sample_checkboxes(12) %>
+              </div>
+            </div>
           </div>
-          <div class="row form-inline">
-            <%= generate_sample_checkboxes(18) %>
+          <hr class="separator">
+          <!--  Row 9 -->
+          <div class="row form-group">
+            <div class="col-md-2 ">
+              <span>Label 9</span>
+            </div>
+            <div class="col-md-6 col-xs-12">
+              <input type="text">
+            </div>
+            <div class="col-md-6 col-xs-12">
+            </div>
           </div>
-        </div>
-      </div>
-      <hr class="separator">
-      <!--  Row 8 -->
-      <div class="row form-group">
-        <div class="col-md-2 col-sm-2">
-          <span>Label 8</span>
-        </div>
-        <div class="col-md-10 col-sm-10">
-          <div class="row form-inline">
-            <%= generate_sample_checkboxes(12) %>
+          <hr class="separator">
+          <!--  Row 10 -->
+          <div class="row form-group">
+            <div class="col-md-2 ">
+              <span>Label 10</span>
+            </div>
+            <div class="col-md-10 col-xs-12">
+              <div class="row form-inline">
+                <%= generate_sample_checkboxes(2) %>
+              </div>
+            </div>
           </div>
-        </div>
-      </div>
-      <hr class="separator">
-      <!--  Row 9 -->
-      <div class="row form-group">
-        <div class="col-md-2 col-sm-2">
-          <span>Label 9</span>
-        </div>
-        <div class="col-md-6 col-sm-6">
-          <input type="text">
-        </div>
-        <div class="col-md-6 col-sm-4">
-        </div>
-      </div>
-      <hr class="separator">
-      <!--  Row 10 -->
-      <div class="row form-group">
-        <div class="col-md-2 col-sm-2">
-          <span>Label 10</span>
-        </div>
-        <div class="col-md-10 col-sm-10">
-          <div class="row form-inline">
-            <%= generate_sample_checkboxes(2) %>
+          <hr class="separator">
+          <!--  Row 11 -->
+          <div class="row form-group">
+            <div class="col-md-2 ">
+              <span>Label 10</span>
+            </div>
+            <div class="col-md-10 col-xs-12">
+              <div class="row form-inline">
+                <%= generate_sample_checkboxes(2) %>
+              </div>
+            </div>
           </div>
-        </div>
-      </div>
-      <hr class="separator">
-      <!--  Row 11 -->
-      <div class="row form-group">
-        <div class="col-md-2 col-sm-2">
-          <span>Label 10</span>
-        </div>
-        <div class="col-md-10 col-sm-10">
-          <div class="row form-inline">
-            <%= generate_sample_checkboxes(2) %>
+          <hr class="separator">
+          <!--  Row 12 -->
+          <div class="row form-group">
+            <div class="col-md-2 ">
+              <span>Label 8</span>
+            </div>
+            <div class="col-md-10 col-xs-12">
+              <div class="row form-inline">
+                <%= generate_sample_checkboxes(10) %>
+              </div>
+            </div>
           </div>
-        </div>
-      </div>
-      <hr class="separator">
-      <!--  Row 12 -->
-      <div class="row form-group">
-        <div class="col-md-2 col-sm-2">
-          <span>Label 8</span>
-        </div>
-        <div class="col-md-10 col-sm-10">
-          <div class="row form-inline">
-            <%= generate_sample_checkboxes(10) %>
+          <hr class="separator">
+          <!--  Row 13 -->
+          <div class="row form-group">
+            <div class="col-md-2 ">
+              <span>Label 13</span>
+            </div>
+            <div class="col-md-10 col-xs-12">
+              <div class="row form-inline">
+                <%= generate_sample_checkboxes(8) %>
+              </div>
+            </div>
           </div>
-        </div>
-      </div>
-      <hr class="separator">
-      <!--  Row 13 -->
-      <div class="row form-group">
-        <div class="col-md-2 col-sm-2">
-          <span>Label 13</span>
-        </div>
-        <div class="col-md-10 col-sm-10">
-          <div class="row form-inline">
-            <%= generate_sample_checkboxes(8) %>
+          <hr class="separator">
+          <!--  Row 14 -->
+          <div class="row form-group">
+            <div class="col-md-2 ">
+              <span>Label 14</span>
+            </div>
+            <div class="col-md-10 col-xs-12">
+              <div class="row form-inline">
+                <%= generate_sample_checkboxes(21) %>
+              </div>
+            </div>
           </div>
-        </div>
-      </div>
-      <hr class="separator">
-      <!--  Row 14 -->
-      <div class="row form-group">
-        <div class="col-md-2 col-sm-2">
-          <span>Label 14</span>
-        </div>
-        <div class="col-md-10 col-sm-10">
-          <div class="row form-inline">
-            <%= generate_sample_checkboxes(21) %>
+          <hr class="separator">
+          <!--  Row 15 -->
+          <div class="row form-group">
+            <div class="col-md-2 ">
+              <span>Label 15</span>
+            </div>
+            <div class="col-md-6 col-xs-12">
+              <input type="text">
+            </div>
+            <div class="col-md-6 col-xs-12">
+            </div>
           </div>
-        </div>
-      </div>
-      <hr class="separator">
-      <!--  Row 15 -->
-      <div class="row form-group">
-        <div class="col-md-2 col-sm-2">
-          <span>Label 15</span>
-        </div>
-        <div class="col-md-6 col-sm-6">
-          <input type="text">
-        </div>
-        <div class="col-md-6 col-sm-4">
-        </div>
-      </div>
-      <hr class="separator">
-      <!--  Row 16 -->
-      <div class="row form-group">
-        <div class="col-md-2 col-sm-2">
-          <span>Label 16</span>
-        </div>
-        <div class="col-md-10 col-sm-10">
-          <div class="row form-inline">
-            <%= generate_sample_checkboxes(2) %>
+          <hr class="separator">
+          <!--  Row 16 -->
+          <div class="row form-group">
+            <div class="col-md-2 ">
+              <span>Label 16</span>
+            </div>
+            <div class="col-md-10 col-xs-12">
+              <div class="row form-inline">
+                <%= generate_sample_checkboxes(2) %>
+              </div>
+            </div>
           </div>
-        </div>
-      </div>
-      <hr class="separator">
-      <!--  Row 17 -->
-      <div class="row form-group">
-        <div class="col-md-2 col-sm-2">
-          <span>Label 17</span>
-        </div>
-        <div class="col-md-10 col-sm-10">
-          <div class="row form-inline">
-            <%= generate_sample_checkboxes(2) %>
+          <hr class="separator">
+          <!--  Row 17 -->
+          <div class="row form-group">
+            <div class="col-md-2 ">
+              <span>Label 17</span>
+            </div>
+            <div class="col-md-10 col-xs-12">
+              <div class="row form-inline">
+                <%= generate_sample_checkboxes(2) %>
+              </div>
+            </div>
           </div>
-        </div>
-      </div>
-      <hr class="separator">
-      <!--  Row 18 -->
-      <div class="row form-group">
-        <div class="col-md-2 col-sm-2">
-          <span>Label 18</span>
-        </div>
-        <div class="col-md-10 col-sm-10">
-          <div class="row form-inline">
-            <%= generate_sample_checkboxes(10) %>
+          <hr class="separator">
+          <!--  Row 18 -->
+          <div class="row form-group">
+            <div class="col-md-2 ">
+              <span>Label 18</span>
+            </div>
+            <div class="col-md-10 col-xs-12">
+              <div class="row form-inline">
+                <%= generate_sample_checkboxes(10) %>
+              </div>
+            </div>
           </div>
-        </div>
-      </div>
-      <hr class="separator">
-      <!--  Row 19 -->
-      <div class="row form-group">
-        <div class="col-md-2 col-sm-2">
-          <span>Label 19</span>
-        </div>
-        <div class="col-md-10 col-sm-10">
-          <div class="row form-inline">
-            <%= generate_sample_checkboxes(8) %>
+          <hr class="separator">
+          <!--  Row 19 -->
+          <div class="row form-group">
+            <div class="col-md-2 ">
+              <span>Label 19</span>
+            </div>
+            <div class="col-md-10 col-xs-12">
+              <div class="row form-inline">
+                <%= generate_sample_checkboxes(8) %>
+              </div>
+            </div>
           </div>
-        </div>
-      </div>
-      <hr class="separator">
-      <!--  Row 20 -->
-      <div class="row form-group">
-        <div class="col-md-2 col-sm-2">
-          <span>Label 20</span>
-        </div>
-        <div class="col-md-10 col-sm-10">
-          <div class="row form-inline">
-            <%= generate_sample_checkboxes(21) %>
+          <hr class="separator">
+          <!--  Row 20 -->
+          <div class="row form-group">
+            <div class="col-md-2 ">
+              <span>Label 20</span>
+            </div>
+            <div class="col-md-10 col-xs-12">
+              <div class="row form-inline">
+                <%= generate_sample_checkboxes(21) %>
+              </div>
+            </div>
           </div>
-        </div>
-      </div>
-      <hr class="separator">
-      <!--  Row 21 -->
-      <div class="row form-group">
-        <div class="col-md-2 col-sm-2">
-          <span>Label 21</span>
-        </div>
-        <div class="col-md-10 col-sm-10">
-          <div class="row form-inline">
-            <%= generate_sample_checkboxes(2) %>
+          <hr class="separator">
+          <!--  Row 21 -->
+          <div class="row form-group">
+            <div class="col-md-2 ">
+              <span>Label 21</span>
+            </div>
+            <div class="col-md-10 col-xs-12">
+              <div class="row form-inline">
+                <%= generate_sample_checkboxes(2) %>
+              </div>
+            </div>
           </div>
-        </div>
-      </div>
-      <hr class="separator">
-      <!--  Row 22 -->
-      <div class="row form-group">
-        <div class="col-md-2 col-sm-2">
-          <span>Label 22</span>
-        </div>
-        <div class="col-md-10 col-sm-10">
-          <div class="row form-inline">
-            <%= generate_sample_checkboxes(31, 4) %>
+          <hr class="separator">
+          <!--  Row 22 -->
+          <div class="row form-group">
+            <div class="col-md-2 ">
+              <span>Label 22</span>
+            </div>
+            <div class="col-md-10 col-xs-12">
+              <div class="row form-inline">
+                <%= generate_sample_checkboxes(31, 4) %>
+              </div>
+            </div>
           </div>
-        </div>
-      </div>
-      <hr class="separator">
-      <!--  Row 23 -->
-      <div class="row form-group">
-        <div class="col-md-2 col-sm-2">
-          <span>Label 23</span>
-        </div>
-        <div class="col-md-10 col-sm-10">
-          <div class="row form-inline">
-            <%= generate_sample_checkboxes(10, 2) %>
+          <hr class="separator">
+          <!--  Row 23 -->
+          <div class="row form-group">
+            <div class="col-md-2 ">
+              <span>Label 23</span>
+            </div>
+            <div class="col-md-10 col-xs-12">
+              <div class="row form-inline">
+                <%= generate_sample_checkboxes(10, 2) %>
+              </div>
+              <div class="col-md-12 col-xs-12">
+                <hr>
+              </div>
+              <div class="row form-inline">
+                <%= generate_sample_checkboxes(4, 4) %>
+              </div>
+              <div class="col-md-12 col-xs-12">
+                <hr>
+              </div>
+              <div class="row form-inline">
+                <%= generate_sample_checkboxes(10, 2) %>
+              </div>
+              <div class="col-md-12 col-xs-12">
+                <hr>
+              </div>
+              <div class="row form-inline">
+                <%= generate_sample_checkboxes(6, 2) %>
+              </div>
+              <hr>
+              <div class="row form-inline">
+                <%= generate_sample_checkboxes(6, 2) %>
+              </div>
+            </div>
           </div>
-          <div class="col-md-12 col-sm-12">
-            <hr>
-          </div>
-          <div class="row form-inline">
-            <%= generate_sample_checkboxes(4, 4) %>
-          </div>
-          <div class="col-md-12 col-sm-12">
-            <hr>
-          </div>
-          <div class="row form-inline">
-            <%= generate_sample_checkboxes(10, 2) %>
-          </div>
-          <div class="col-md-12 col-sm-12">
-            <hr>
-          </div>
-          <div class="row form-inline">
-            <%= generate_sample_checkboxes(6, 2) %>
-          </div>
-          <hr>
-          <div class="row form-inline">
-            <%= generate_sample_checkboxes(6, 2) %>
-          </div>
-        </div>
-      </div>
-      <hr class="separator">
-      <!--  Row 24 -->
-      <div class="row form-group">
-        <div class="col-md-2 col-sm-2">
-          <span>Label 24</span>
-        </div>
-        <div class="col-md-10 col-sm-10">
-          <div class="row form-inline">
-            <%= generate_sample_checkboxes(2) %>
+          <hr class="separator">
+          <!--  Row 24 -->
+          <div class="row form-group">
+            <div class="col-md-2 ">
+              <span>Label 24</span>
+            </div>
+            <div class="col-md-10 col-xs-12">
+              <div class="row form-inline">
+                <%= generate_sample_checkboxes(2) %>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
   </form>
-  </div>
 </div>

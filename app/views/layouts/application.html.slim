@@ -3,10 +3,10 @@ html
   head
     title
       | Rails
-    = csrf_meta_tags
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
-    == yield :header_js
+    = csrf_meta_tags
+    = tag 'meta', {:content => "width=device-width, initial-scale=1.0", :name => "viewport"}, true
 
   body
     = render 'mcmap/shared/header'

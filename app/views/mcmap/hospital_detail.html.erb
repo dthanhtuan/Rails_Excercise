@@ -1,0 +1,251 @@
+<div class="container mcmap <%= action_name %>">
+  <div class="row">
+    <div class="col-md-8 col-sm-8 col-xs-12">
+      <a class="btn btn-danger" href="#" role="button">Map</a>
+      <a class="btn btn-default" href="<%= mcmap_index_path %>" role="button">Back</a>
+    </div>
+    <div class="col-md-4 col-sm-4 col-xs-12">
+      <div>Phone number: 21321111</div>
+      <div>(Ext: 1510~1513)</div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-1 col-sm-1 col-xs-12">
+      <a class="btn btn-primary" href="#" role="button">Link</a>
+    </div>
+    <div class="col-md-7 col-sm-7 col-xs-12">
+      <div>Hospital name in Katakana</div>
+      <div>Hospital name in Kanji</div>
+      <div>URL:</div>
+      <div>Doctors:</div>
+    </div>
+    <div class="col-md-4 col-sm-4 col-xs-12">
+      <div>Update date: 06/07/2018</div>
+    </div>
+  </div>
+  <hr>
+  <div class="row">
+    <div class="col-md-12 col-xs-12">
+      <table class="table table-bordered">
+        <tbody>
+        <tr>
+          <td class="col-md-1 light-blue-bg font-weight-bold ">Label 1</td>
+          <td colspan="3">
+            <p><%= Faker::Company.duns_number %></p>
+            <p><%= Faker::WorldOfWarcraft.quote %></p>
+          </td>
+        </tr>
+        <tr>
+          <td class="light-blue-bg font-weight-bold">Label 2</td>
+          <td class="col-md-4"><%= Faker::Company.duns_number %></td>
+          <td class="col-md-1 light-blue-bg font-weight-bold" rowspan="3">Label 2.3</td>
+          <td rowspan="3">
+            <%= generate_sample_checkboxes(4, 12) %>
+          </td>
+        </tr>
+        <tr>
+          <td class="light-blue-bg font-weight-bold">Label 3</td>
+          <td><%= Faker::Company.duns_number %></td>
+        </tr>
+        <tr>
+          <td class="light-blue-bg font-weight-bold">Label 4</td>
+          <td><%= Faker::Company.name + " " + Faker::Company.name %></td>
+        </tr>
+        <tr>
+          <td class="light-blue-bg font-weight-bold">Label 5</td>
+          <td><%= Faker::Company.duns_number %></td>
+          <td class="light-blue-bg font-weight-bold">Label 5.3</td>
+          <td>  <%= generate_sample_checkboxes(2, 4) %></td>
+        </tr>
+        </tbody>
+      </table>
+
+      <div class="col-md-offset-4">
+        <table class="table table-bordered">`
+          <tbody>
+          <tr>
+            <td class="col-md-4 light-blue-bg font-weight-bold" colspan="2"><%= Faker::Commerce.department %></td>
+            <td class="col-md-2 text-center">ON</td>
+            <td class="col-md-4 light-blue-bg font-weight-bold"><%= Faker::Commerce.department %></td>
+            <td class="col-md-2 text-center">OFF</td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-4 font-weight-bold"><%= Faker::Space.galaxy %></div>
+    <div class="col-md--8 text-right">Date Time: 2014/11/01</div>
+    <div class="col-md-4">
+      <table class="table table-bordered">
+        <tbody>
+        <%= generate_sample_table(10) %>
+        <%= generate_sample_table(10) %>
+        <%= generate_sample_table(2) %>
+        </tbody>
+      </table>
+    </div>
+    <div class="col-md-4">
+      <table class="table table-bordered">
+        <tbody>
+        <%= generate_sample_table(18) %>
+        <%= generate_sample_table(6, 'empty') %>
+        </tbody>
+      </table>
+    </div>
+    <div class="col-md-4">
+      <table class="table table-bordered">
+        <tbody>
+        <%= generate_sample_table(12) %>
+        <%= generate_sample_table(4, 'empty') %>
+        <tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-12 col-xs-12">
+      <table class="table table-bordered ">
+        <tbody>
+        <tr class="light-blue-bg">
+          <td class="one-word-per-line blue-bg text-center" rowspan="7">SSSS</td>
+          <td class="col-md-3 text-center">
+            <div class="col-md-12 font-weight-bold">Column Title</div>
+          </td>
+          <td class="text-center">A</td>
+          <td class="col-md-2">
+            <div class="col-md-6 text-center">B1</div>
+            <div class="col-md-6 text-center">B2</div>
+          </td>
+          <td class="text-center">C</td>
+          <td class="text-center">D</td>
+          <td class="text-center">E</td>
+          <td class="col-md-2">
+            <div class="col-md-6 text-center">F1</div>
+            <div class="col-md-6 text-center">F2</div>
+          </td>
+        </tr>
+        <tr>
+          <td class="text-center light-blue-bg">9:00 - 17:30</td>
+          <td class="text-center">O</td>
+          <td class="col-md-2">
+            <div class="col-md-6 text-center">O</div>
+            <div class="col-md-6 text-center"></div>
+          </td>
+          <td class="text-center">O</td>
+          <td class="text-center">O</td>
+          <td class="text-center"></td>
+          <td class="col-md-2">
+            <div class="col-md-6 text-center"></div>
+            <div class="col-md-6 text-center"></div>
+          </td>
+        </tr>
+        <tr>
+          <td class="text-center light-blue-bg">9:00 - 12:30</td>
+          <td class="text-center"></td>
+          <td class="col-md-2">
+            <div class="col-md-6 text-center"></div>
+            <div class="col-md-6 text-center">O</div>
+          </td>
+          <td class="text-center"></td>
+          <td class="text-center"></td>
+          <td class="text-center">O</td>
+          <td class="col-md-2">
+            <div class="col-md-6 text-center"></div>
+            <div class="col-md-6 text-center"></div>
+          </td>
+        </tr>
+        <tr>
+          <td class="text-center light-blue-bg">&nbsp;</td>
+          <td class="text-center"></td>
+          <td class="col-md-2">
+            <div class="col-md-6 text-center"></div>
+            <div class="col-md-6 text-center"></div>
+          </td>
+          <td class="text-center"></td>
+          <td class="text-center"></td>
+          <td class="text-center"></td>
+          <td class="col-md-2">
+            <div class="col-md-6 text-center"></div>
+            <div class="col-md-6 text-center"></div>
+          </td>
+        </tr>
+        <tr>
+          <td class="text-center light-blue-bg">&nbsp;</td>
+          <td class="text-center"></td>
+          <td class="col-md-2">
+            <div class="col-md-6 text-center"></div>
+            <div class="col-md-6 text-center"></div>
+          </td>
+          <td class="text-center"></td>
+          <td class="text-center"></td>
+          <td class="text-center"></td>
+          <td class="col-md-2">
+            <div class="col-md-6 text-center"></div>
+            <div class="col-md-6 text-center"></div>
+          </td>
+        </tr>
+        <tr>
+          <td class="text-center light-blue-bg font-weight-bold">Text 1 - 2</td>
+          <td colspan="6">Text - Text - Text</td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-12">
+      <h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        Suspendisse porta gravida magna.
+      </h4>
+    </div>
+    <div class="col-md-4">
+      <table class="table table-bordered">
+        <tbody>
+        <%= generate_sample_table(5, 'no_mark') %>
+        <tr>
+          <td class="col-md-1 one-word-per-line blue-bg text-center" rowspan="3">ABCD</td>
+          <td class="col-md-4">
+            <p>Line 1</p>
+            <p>Line 1</p>
+            <p>Line 1</p>
+          </td>
+          <td>
+          </td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="col-md-8">
+      <table class="table table-bordered">
+        <tbody>
+        <tr>
+          <td class="col-md-1 one-word-per-line blue-bg text-center" rowspan="2">ABCD</td>
+          <td class="col-md-4">
+            <p>Line 1</p>
+            <p>Line 1</p>
+            <p>Line 1</p>
+            <p>Line 1</p>
+            <p>Line 1</p>
+            <p>Line 1</p>
+          </td>
+          <td>
+          </td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>
+            <%= generate_sample_checkboxes(4,6) %>
+          </td>
+        </tr>
+        <%= generate_sample_table(3, 'no_mark') %>
+      </table>
+    </div>
+  </div>
+</div>
+
+
