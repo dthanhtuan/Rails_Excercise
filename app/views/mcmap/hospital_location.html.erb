@@ -1,0 +1,72 @@
+<% api_key = 'AuR1da9qofh51efnw2aHR6coBmMHTltqGO-NlCn3Lwk0oAHY1Qlz_9IcSr02TpuC'
+   content_for(:header) do %>
+  <script type='text/javascript'
+          src='http://www.bing.com/api/maps/mapcontrol?callback=GetMap&key=AuR1da9qofh51efnw2aHR6coBmMHTltqGO-NlCn3Lwk0oAHY1Qlz_9IcSr02TpuC'>
+  </script>
+<% end %>
+<div class="container mcmap <%= action_name %>">
+  <div class="row">
+    <div class="col-md-1 col-sm-1 col-xs-12">
+      <a class="btn btn-primary" href="#" role="button">Button</a>
+    </div>
+    <div class="col-md-7 col-sm-7 col-xs-12">
+      <div>Hospital name in Katakana</div>
+      <div>Hospital name in Kanji</div>
+      <div>URL:</div>
+      <div>Doctors:</div>
+    </div>
+    <div class="col-md-4 col-sm-4 col-xs-12 text-right">
+      <a class="btn btn-default" href="#" role="button">Button</a>
+      <div>Update date: 06/07/2018</div>
+    </div>
+  </div>
+  <hr>
+  <div class="row">
+    <div class="col-md-8">
+      <table class="table table-bordered">
+        <tbody>
+        <tr>
+          <td class="col-md-1 light-blue-bg font-weight-bold ">Label 1</td>
+          <td colspan="3">
+            <p><%= Faker::Company.duns_number %></p>
+            <p><%= Faker::WorldOfWarcraft.quote %></p>
+          </td>
+        </tr>
+        <tr>
+          <td class="light-blue-bg font-weight-bold">Label 2</td>
+          <td class="col-md-4"><%= Faker::Company.duns_number %></td>
+        </tr>
+        <tr>
+          <td class="light-blue-bg font-weight-bold">Label 3</td>
+          <td><%= Faker::Company.duns_number %></td>
+        </tr>
+        <tr>
+          <td class="light-blue-bg font-weight-bold">Label 4</td>
+          <td><%= Faker::Company.name + " " + Faker::Company.name %></td>
+        </tr>
+        <tr>
+          <td class="light-blue-bg font-weight-bold">Label 5</td>
+          <td><%= Faker::Company.duns_number %></td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="col-md-4">
+      Sed consectetur risus enim, sit amet lacinia dolor mollis non. Quisque ut sapien lorem. Etiam eget libero
+      pellentesque, consequat quam et, interdum sapien. Quisque at turpis ex. Integer gravida semper imperdiet.
+    </div>
+  </div>
+
+  <div class="row">
+    <div onload="GetMap" id="bingMap" style='position:relative;width:600px;height:400px;'></div>
+  </div>
+  <script type="text/javascript" charset="utf-8">
+    function GetMap() {
+      var map = new Microsoft.Maps.Map('#bingMap', {
+        zoom: 15,
+      });
+      var pushpin = new Microsoft.Maps.Pushpin(map.getCenter(), null);
+      map.entities.push(pushpin);
+    }
+  </script>
+</div>

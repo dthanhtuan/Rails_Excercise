@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   get 'slim', to: 'developers#slim_test'
   get 'js-test', to: 'developers#js_test'
   get '/hospital-detail', to: 'mcmap#hospital_detail'
+  get '/hospital-location', to: 'mcmap#hospital_location'
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   namespace :api do

@@ -1,11 +1,11 @@
 // Place all the styles related to the mcmap controller here.
 // They will automatically be included in application.scss.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-#html_form_table div > input[type="text"] {
-  width: 100%;
-}
 
 #html_form_table {
+  div > input[type="text"] {
+    width: 100%;
+  }
   border: 1px solid #ccc;
   padding: 1em;
 }
@@ -14,35 +14,31 @@
   margin-bottom: 3em;
 }
 
-.mcmap.hospital_detail > div.row {
-  margin-top: 1em;
-}
-
-.mcmap.hospital_detail > div.row div.col-md-1.col-sm-2 {
-  margin-left: 1em;
-}
-
-.mcmap.hospital_detail .light-blue-bg {
-  background-color: #a3c8ed;
-}
-
-.mcmap.hospital_detail .blue-bg {
-  background-color: #40608D;
-}
-
-.mcmap.hospital_detail .one-word-per-line {
-  word-break: break-all;
-  color: white;
-  font-weight: bold;
-  width: 30px;
-}
-
-.mcmap.hospital_detail .font-weight-bold {
-  font-weight: bold;
-}
-
-.mcmap.hospital_detail table.table-bordered td{
-  border: 2px solid #769cc1;
+.mcmap.hospital_detail {
+  > div.row {
+    margin-top: 1em;
+    div.col-md-1.col-sm-2 {
+      margin-left: 1em;
+    }
+  }
+  .light-blue-bg {
+    background-color: #a3c8ed;
+  }
+  .blue-bg {
+    background-color: #40608D;
+  }
+  .one-word-per-line {
+    word-break: break-all;
+    color: white;
+    font-weight: bold;
+    width: 30px;
+  }
+  .font-weight-bold {
+    font-weight: bold;
+  }
+  table.table-bordered td {
+    border: 2px solid #769cc1;
+  }
 }
 
 .no-padding {
