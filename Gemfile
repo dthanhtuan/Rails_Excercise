@@ -45,6 +45,7 @@ group :development, :test do
   gem 'kaminari'
   gem 'rubocop', require: false
   gem 'bullet', group: 'development'
+  gem 'faker', '~> 1.6', '>= 1.6.6'
 end
 
 group :development do
@@ -52,7 +53,6 @@ group :development do
   gem 'rspec-rails', '~> 3.7'
   gem 'web-console', '>= 3.3.0'
   gem 'rspec-benchmark'
-  gem 'faker', '~> 1.6', '>= 1.6.6'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem

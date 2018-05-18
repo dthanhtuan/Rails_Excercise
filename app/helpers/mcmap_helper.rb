@@ -92,9 +92,4 @@ module McmapHelper
   def generate_random_string(number)
     [*('A'..'Z')].sample(number).join
   end
-
-  def generate_bing_map
-    javascript_include_tag
-  end
-
 end

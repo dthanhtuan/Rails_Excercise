@@ -14,4 +14,4 @@ Rails.application.config.assets.paths << Rails.root.join('node_modules')
 # Rails.application.config.assets.precompile += %w( admin.js admin.css )
 #
 # Include Js to Precompile:
-Rails.application.config.assets.precompile += %w( testing_js.js  bootstrap.min.css bootstrap.min.js)
+Rails.application.config.assets.precompile += %w( testing_js.js map_multiple_locations.js map_single_location)

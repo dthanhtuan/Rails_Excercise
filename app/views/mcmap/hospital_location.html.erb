@@ -6,10 +6,10 @@
 <% end %>
 <div class="container mcmap <%= action_name %>">
   <div class="row">
-    <div class="col-md-1 col-sm-1 col-xs-12">
+    <div class="col-md-1 col-sm-2 col-xs-12">
       <a class="btn btn-primary" href="#" role="button">Button</a>
     </div>
-    <div class="col-md-7 col-sm-7 col-xs-12">
+    <div class="col-md-7 col-sm-6 col-xs-12">
       <div>Hospital name in Katakana</div>
       <div>Hospital name in Kanji</div>
       <div>URL:</div>
@@ -58,15 +58,9 @@
   </div>
 
   <div class="row">
-    <div onload="GetMap" id="bingMap" style='position:relative;width:600px;height:400px;'></div>
+    <div class="col-xs-12 col-md-8">
+      <div onload="GetMap" id="bingMap" style='position:relative;width:100%;height:400px;'></div>
+    </div>
   </div>
-  <script type="text/javascript" charset="utf-8">
-    function GetMap() {
-      var map = new Microsoft.Maps.Map('#bingMap', {
-        zoom: 15,
-      });
-      var pushpin = new Microsoft.Maps.Pushpin(map.getCenter(), null);
-      map.entities.push(pushpin);
-    }
-  </script>
+  <%= javascript_include_tag "map_multiple_locations" %>
 </div>

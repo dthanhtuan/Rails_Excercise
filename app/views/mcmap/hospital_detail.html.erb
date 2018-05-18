@@ -1,27 +1,37 @@
 <div class="container mcmap <%= action_name %>">
   <div class="row">
     <div class="col-md-8 col-sm-8 col-xs-12">
-      <a class="btn btn-danger" href="<%= hospital_location_path %>" role="button">Map</a>
-      <a class="btn btn-default" href="<%= mcmap_index_path %>" role="button">Back</a>
+      <div class="col-sm-1 col-xs-2">
+        <a class="btn btn-danger" href="<%= hospital_location_path %>" role="button">Map</a>
+      </div>
+      <div class="col-sm-1 col-sm-offset-1 col-xs-2">
+        <a class="btn btn-default" href="<%= mcmap_index_path %>" role="button">Back</a>
+      </div>
     </div>
     <div class="col-md-4 col-sm-4 col-xs-12">
-      <div>Phone number: 21321111</div>
-      <div>(Ext: 1510~1513)</div>
+      <div class="col-xs-12">Phone number: 21321111</div>
+      <div class="col-xs-12">(Ext: 1510~1513)</div>
     </div>
   </div>
 
   <div class="row">
     <div class="col-md-1 col-sm-1 col-xs-12">
-      <a class="btn btn-primary" href="#" role="button">Link</a>
+      <div class="col-md-12">
+        <a class="btn btn-primary" href="#" role="button">Link</a>
+      </div>
     </div>
     <div class="col-md-7 col-sm-7 col-xs-12">
-      <div>Hospital name in Katakana</div>
-      <div>Hospital name in Kanji</div>
-      <div>URL:</div>
-      <div>Doctors:</div>
+      <div class="col-xs-12 col-sm-offset-1">
+        <div>Hospital name in Katakana</div>
+        <div>Hospital name in Kanji</div>
+        <div>URL:</div>
+        <div>Doctors:</div>
+      </div>
     </div>
     <div class="col-md-4 col-sm-4 col-xs-12">
-      <div>Update date: 06/07/2018</div>
+      <div class="col-xs-12">
+        <div>Update date: 06/07/2018</div>
+      </div>
     </div>
   </div>
   <hr>
@@ -239,7 +249,7 @@
         <tr>
           <td></td>
           <td>
-            <%= generate_sample_checkboxes(4,6) %>
+            <%= generate_sample_checkboxes(4, 6) %>
           </td>
         </tr>
         <%= generate_sample_table(3, 'no_mark') %>
