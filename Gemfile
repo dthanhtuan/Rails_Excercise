@@ -5,6 +5,8 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
+gem 'therubyracer'
+gem 'webpacker', '~> 3.5'
 gem 'slim-rails'
 gem 'gon'
 gem 'active_model_serializers'
